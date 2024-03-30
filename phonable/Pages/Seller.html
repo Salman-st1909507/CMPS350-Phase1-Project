@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seller Interface</title>
+        <link rel="stylesheet" href="../Style/seller.css">
+        <link rel="stylesheet" href="../Style/general-layout.css">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#uploadItem">Upload Item</a></li>
+                    <li><a href="#viewItems">View Items</a></li>
+                    <li><a href="#viewSalesHistory">Sales History</a></li>
+                </ul>
+            </nav>
+            <img src="Phonable Logo.png" alt="Phonable Logo">
+        </header>
+
+        <main class="column">
+            <section class="column" id="uploadItem">
+                <h2 class="uploaditem">Upload an Item</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" id="itemName" name="itemName"
+                        required><br>
+
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" min="0.01"
+                        step="0.01" required><br>
+
+                    <label for="quantity">Available Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1"
+                        required><br>
+
+                    <label for="itemImage">Item Image:</label>
+                    <input type="url" id="itemImage" name="itemImage"
+                        accept="image/*" required><br>
+
+                    <button class="button" type="submit">Upload Item</button>
+                </form>
+            </section>
+
+            <section id="viewItems">
+                <h2>View Items for Sale</h2>
+                <div class="item-grid" id="itemGrid">
+
+                </div>
+            </section>
+
+        </main>
+
+        <script src="../Scripts/seller.js"></script>
+    </body>
+</html>
